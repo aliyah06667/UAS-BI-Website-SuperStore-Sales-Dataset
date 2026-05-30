@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -64,3 +65,27 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# UAS BUSINESS INTELLIGENCE WEBSITE SUPERSTORE SALES
+
+
+
+**Nama Anggota**
+- Nabila Imtiyaz Agustin (011)
+- Zahra Aulia Rahmah (020)
+- Aliyah Azzah Sekedang (021)
+
+---
+## Deskripsi Dataset
+
+**Sumber Data:** https://www.kaggle.com/datasets/laibaanwer/superstore-sales-dataset?resource=download
+
+**Topik:** Data Transaksi penjualan ritel global (Global Superstore)
+
+**Periode:** Tahun 2011 hingga 2014
+
+**Jumlah Data:** 51.290 baris dan 21 kolom
+
+---
+
+>>>>>>> 4461b85209d2860e7cca50e3037794c6b10b04ea
