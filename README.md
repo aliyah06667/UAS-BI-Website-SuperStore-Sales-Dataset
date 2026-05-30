@@ -1,91 +1,369 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center">
+UAS BUSINESS INTELLIGENCE WEBSITE SUPERSTORE SALES
+</h1>
+
+
+
+<div align="center">
+
+## Nama Anggota Tim Pengembang
+
+| Nama | NIM |
+|------|------|
+| Nabila Imtiyaz Agustin | 2409116011 |
+| Zahra Aulia Rahmah | 2409116020 |
+| Aliyah Azzah Sekedang | 2409116021 |
+
+<br>
+
+Sistem Informasi • Fakultas Teknik • Universitas Mulawarman
+
+</div>
+
+# SerbaSerbi Business Dashboard
+
+Website Business Intelligence berbasis Laravel yang dirancang untuk membantu proses analisis penjualan, monitoring performa bisnis, dan pengambilan keputusan berbasis data menggunakan pendekatan Data Warehouse, ETL, dan Machine Learning (K-Means Clustering).
+
+---
+
+## 📂 Deskripsi Program
+
+**SerbaSerbi Sales Dashboard** merupakan sistem pendukung keputusan (Decision Support System) yang dibangun menggunakan framework Laravel dan MySQL untuk mengolah serta memvisualisasikan data penjualan dari dataset **Global Superstore Sales**.
+
+Sistem ini mengintegrasikan:
+
+- Business Intelligence (BI)
+- Data Warehouse (Star Schema)
+- ETL (Extract, Transform, Load)
+- Dashboard Analytics
+- Machine Learning (K-Means Clustering)
+
+Tujuan utama sistem adalah membantu manajemen memahami performa penjualan, profitabilitas, kontribusi produk, serta menghasilkan rekomendasi bisnis berbasis data.
+
+---
+
+## 📂 Fitur Utama
+
+### 1. Dashboard Analytics
+
+Menampilkan ringkasan performa bisnis secara real-time melalui berbagai visualisasi interaktif.
+
+#### KPI Cards
+
+* Total Sales
+* Total Orders
+* Total Customers
+* Total Profit
+* Total Quantity Sold
+
+#### Visualisasi
+
+* Sales Trend Analysis
+* Profit Trend Analysis
+* Category Contribution Analysis
+* Sales & Profit Distribution
+* Product Segmentation Analysis
+
+---
+
+### 2. Transaction Management
+
+Mengelola data transaksi penjualan yang berasal dari file CSV.
+
+#### Fitur
+
+* Import Data CSV
+* Search Transaction
+* Transaction History
+* Data Validation
+* ETL Monitoring
+
+---
+
+### 3. Product Management
+
+Menampilkan katalog produk secara terstruktur.
+
+#### Informasi Produk
+
+* Product ID
+* Product Name
+* Category
+* Sub Category
+* Sales
+* Profit
+* Quantity
+
+---
+
+### 4. Business Reports
+
+Menyediakan laporan analitik yang digunakan sebagai dasar pengambilan keputusan.
+
+#### Analisis yang Disediakan
+
+* Sales Performance Report
+* Profit Report
+* Category Analysis
+* Product Analysis
+* Segmentation Report
+* Decision Support Recommendations
+
+---
+
+### 5. Machine Learning Segmentation
+
+Menggunakan algoritma **K-Means Clustering** untuk mengelompokkan produk berdasarkan performa penjualan.
+
+#### Cluster
+
+| Segment         | Description                                             |
+| --------------- | ------------------------------------------------------- |
+| High Value      | Produk dengan sales dan profit tinggi                   |
+| Growth          | Produk dengan performa stabil dan berpotensi berkembang |
+| Low Performance | Produk dengan sales dan profit rendah                   |
+
+#### Variabel Clustering
+
+* Sales
+* Profit
+
+---
+
+## 📂 Dataset
+
+Dataset yang digunakan adalah **Global Superstore Sales Dataset** yang diperoleh dari Kaggle.
+
+### Informasi Dataset
+
+| Attribute | Value            |
+| --------- | ---------------- |
+| Source    | Kaggle           |
+| Format    | CSV              |
+| Rows      | 51,290           |
+| Columns   | 21               |
+| Period    | 2011 - 2014      |
+| Countries | 147 Countries    |
+| Markets   | 7 Global Markets |
+
+---
+
+## 📂 ETL Process
+
+### 1. Extract
+
+Mengambil data mentah dari file CSV Global Superstore Sales.
+
+### 2. Transform
+
+Tahapan transformasi meliputi:
+
+* Missing Value Handling
+* Duplicate Removal
+* Date Standardization
+* Data Type Conversion
+* Data Normalization
+* Profit Calculation
+* Shipping Analysis
+
+### 3. Load
+
+Memuat data ke dalam Data Warehouse MySQL menggunakan SQLAlchemy.
+
+---
+
+## 📂 Data Warehouse Design
+
+Sistem menggunakan pendekatan **Star Schema**.
+
+### 1. Fact Table
+
+#### a. fact_sales
+
+| Column        |
+| ------------- |
+| fact_id       |
+| order_id      |
+| date_key      |
+| customer_key  |
+| product_key   |
+| location_key  |
+| ship_mode_key |
+| sales         |
+| quantity      |
+| discount      |
+| profit        |
+| shipping_cost |
+
+### 2. Dimension Tables
+
+#### a. dim_date
+
+| Column     |
+| ---------- |
+| date_key   |
+| full_date  |
+| day_name   |
+| month_name |
+| quarter    |
+| year       |
+
+#### b. dim_customer
+
+| Column        |
+| ------------- |
+| customer_key  |
+| customer_name |
+| segment       |
+
+#### c. dim_product
+
+| Column       |
+| ------------ |
+| product_key  |
+| product_id   |
+| product_name |
+| category     |
+| sub_category |
+
+#### d. dim_location
+
+| Column       |
+| ------------ |
+| location_key |
+| state        |
+| country      |
+| region       |
+| market       |
+
+---
+
+## 📂 Dashboard Widgets
+
+### 1. Executive KPI Cards
+
+Menampilkan indikator utama bisnis:
+
+* Total Sales
+* Total Profit
+* Orders
+* Customers
+* Quantity Sold
+
+### 2. Monthly Sales Trend
+
+Visualisasi tren penjualan bulanan menggunakan line chart.
+
+Digunakan untuk:
+
+* Monitoring performa tahunan
+* Identifikasi seasonal trend
+* Analisis pertumbuhan bisnis
+
+### 3. Monthly Profit Trend
+
+Menampilkan perkembangan profit setiap bulan.
+
+Digunakan untuk:
+
+* Evaluasi profitabilitas
+* Analisis margin keuntungan
+
+### 4. Category Contribution Chart
+
+Visualisasi kontribusi penjualan berdasarkan kategori produk.
+
+Kategori:
+
+* Furniture
+* Office Supplies
+* Technology
+
+### 5. Sales & Profit Scatter Plot
+
+Menampilkan distribusi data berdasarkan:
+
+* Sales
+* Profit
+
+Digunakan untuk:
+
+* Identifikasi produk unggulan
+* Deteksi produk merugi
+* Analisis outlier
+
+### 6. Product Segmentation Cards
+
+Menampilkan hasil clustering:
+
+* High Value Segment
+* Growth Segment
+* Low Performance Segment
+
+### 7. Decision Support Recommendations
+
+Menyediakan rekomendasi otomatis berdasarkan hasil analisis dan segmentasi.
+
+Contoh:
+
+* Fokus promosi pada Growth Segment
+* Pertahankan High Value Products
+* Evaluasi Low Performance Products
+
+---
+
+## 📂 Teknologi yang Digunakan
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://skillicons.dev/icons?i=laravel,php,mysql,html,css,bootstrap,python,vscode,figma" />
 </p>
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# UAS BUSINESS INTELLIGENCE WEBSITE SUPERSTORE SALES
-
-
-
-**Nama Anggota**
-- Nabila Imtiyaz Agustin (011)
-- Zahra Aulia Rahmah (020)
-- Aliyah Azzah Sekedang (021)
-
----
-## Deskripsi Dataset
-
-**Sumber Data:** https://www.kaggle.com/datasets/laibaanwer/superstore-sales-dataset?resource=download
-
-**Topik:** Data Transaksi penjualan ritel global (Global Superstore)
-
-**Periode:** Tahun 2011 hingga 2014
-
-**Jumlah Data:** 51.290 baris dan 21 kolom
+<p align="center">
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
+  <img src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white" />
+  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
+  <img src="https://img.shields.io/badge/K--Means_Clustering-6A1B9A?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Blade_Template-F55247?style=for-the-badge&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/phpMyAdmin-6C78AF?style=for-the-badge&logo=phpmyadmin&logoColor=white" />
+</p>
 
 ---
 
->>>>>>> 4461b85209d2860e7cca50e3037794c6b10b04ea
+## 📂 Halaman Sistem
+
+### Public Pages
+- Homepage, Contact, & Login
+
+### User (Admin) Pages
+- Dashboard, Transactions, Products, Reports, & Logout
+
+---
+
+## 📂 Business Intelligence Outcomes
+
+Melalui implementasi sistem ini, pengguna dapat:
+
+* Memantau performa bisnis secara real-time
+* Mengidentifikasi produk paling menguntungkan
+* Mengetahui tren penjualan tahunan
+* Melakukan segmentasi produk secara otomatis
+* Mendukung pengambilan keputusan berbasis data
+* Mengurangi proses analisis manual
+
+---
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Copyright-©%202026%20SerbaSerbi.%20Dashboard%20Kelompok%2019-BD3D5A?style=for-the-badge" />
+</p>
+
+<p align="center">
+  <strong>© 2026 SerbaSerbi. Dashboard Kelompok 19</strong><br>
+  Business Intelligence Dashboard Project<br>
+  Information Systems, Faculty of Engineering<br>
+  Universitas Mulawarman
+</p>
+
+<p align="center">
+  This project was developed for academic and educational purposes.<br>
+  All rights reserved.
+</p>
