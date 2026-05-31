@@ -2,7 +2,7 @@
 UAS BUSINESS INTELLIGENCE WEBSITE SUPERSTORE SALES
 </h1>
 
-
+<img align="center"><img width="2100" height="700" alt="HEADER GITHUB" src="https://github.com/user-attachments/assets/ae53c7a8-571e-4b2a-a76c-ae5bec100a1e" /></img>
 
 <div align="center">
 
